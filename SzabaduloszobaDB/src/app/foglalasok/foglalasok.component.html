@@ -1,0 +1,23 @@
+<p>index.txt works!</p>
+<h2>Foglalások</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Dátum</th>
+      <th scope="col">Név</th>
+      <th scope="col">Fő</th>
+      <th scope="col">Helyszín</th>
+      <th scope="col">Irányítószám</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let foglalas of foglalasok | orderBy: 'date':true">
+      <td>{{ foglalas.date | date }}</td>
+      <td>{{ foglalas.name }}</td>
+      <td>{{ foglalas.guests }}</td>
+      <td>{{ foglalas.location }}</td>
+      <td>{{ foglalas.zipCode }}</td>
+    </tr>
+  </tbody>
+</table>
